@@ -1,0 +1,67 @@
+/* Layout & card */
+.policy-container { --radius: 18px; --shadow: 0 12px 30px rgba(2,6,23,.06); }
+.policy-card {
+  border: 1px solid rgba(0,0,0,.04);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.policy-header {
+  background: linear-gradient(180deg, rgba(248,249,250,.7), rgba(248,249,250,.3));
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.policy-body { padding: 1.25rem; }
+
+.policy-hint { font-size: 12px; color: #6b7280; }
+
+/* Meta column sections */
+.policy-meta-col .policy-section { 
+  background: #fff; 
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 16px rgba(2,6,23,.04);
+}
+.policy-section-title {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+.policy-body .form-label { color: #374151; }
+.policy-body .form-control, .policy-body .form-select {
+  border-radius: 12px;
+  border-color: rgba(0,0,0,.12);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.policy-body .form-control:focus, .policy-body .form-select:focus {
+  border-color: rgba(25,91,255,.45);
+  box-shadow: 0 0 0 .2rem rgba(25,91,255,.12);
+}
+
+/* Markdown editor */
+.policy-mdeditor {
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(2,6,23,.05);
+}
+.policy-mdeditor .w-md-editor { border: none !important; font-size: 15px; }
+.policy-mdeditor .w-md-editor-toolbar {
+  position: sticky; top: 0; z-index: 2; /* sticky toolbar */
+  border-bottom: 1px solid rgba(0,0,0,.06) !important;
+  background: #fafafa !important;
+}
+.policy-mdeditor .w-md-editor-content { background: #fff !important; }
+.policy-mdeditor .w-md-editor-content .wmde-markdown { padding: 18px !important; line-height: 1.68; }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .policy-body { padding: 1rem; }
+  .policy-mdeditor .w-md-editor-content .wmde-markdown { padding: 14px !important; }
+}
+/* Policy.css */
+.driver-popover { z-index: 9999; }
+.policy-card, .policy-mdeditor { position: relative; }

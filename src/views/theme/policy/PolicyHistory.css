@@ -1,0 +1,82 @@
+/* src/pages/policy/PolicyHistory.css */
+.policy-history-container .policy-card {
+  border-radius: 14px;
+}
+
+/* Bảng gọn, hàng đều nhau */
+.policy-history-table table {
+  table-layout: fixed;                 /* bám theo colgroup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.policy-history-table .table thead th,
+.policy-history-table .table tbody td {
+  vertical-align: middle;
+  padding: 12px 14px;
+  line-height: 1.35;
+}
+.policy-history-table .cell-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.policy-history-table .cell-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.policy-history-table .ph-btn {
+  height: 30px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.policy-history-table .ph-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.policy-history-table .ph-sort {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ===== Pagination (giống pattern các trang trước) ===== */
+.ph-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #475569;
+}
+.ph-pg-middle { display: flex; align-items: center; }
+.ph-pg-right { display: flex; align-items: center; }
+.ph-pg-sep { display: inline-block; width: 10px; }
+
+.ph-pg-btn {
+  min-width: 34px;
+  height: 34px;
+  padding: 0 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: background .15s, transform .08s, border-color .15s;
+}
+.ph-pg-btn:hover { background: #f1f5f9; }
+.ph-pg-btn.active { background: #111827; color: #fff; border-color: #111827; }
+.ph-pg-btn:disabled { opacity: .55; cursor: not-allowed; }
+.ph-pg-dots {
+  display: inline-block;
+  padding: 0 6px;
+  color: #94a3b8;
+}

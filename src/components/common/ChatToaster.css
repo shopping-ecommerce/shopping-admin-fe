@@ -1,0 +1,71 @@
+/* ===== Stack positions ===== */
+.ct-stack {
+  position: fixed;
+  display: grid;
+  gap: 10px;
+  z-index: 9999;
+  pointer-events: none; /* click xuyên qua, trừ phần tử bên trong */
+}
+.ct-stack > * { pointer-events: auto; }
+
+.ct-stack.top-right    { top: 16px; right: 16px; }
+.ct-stack.top-left     { top: 16px; left: 16px; }
+.ct-stack.bottom-right { bottom: 16px; right: 16px; }
+.ct-stack.bottom-left  { bottom: 16px; left: 16px; }
+
+/* ===== Toast ===== */
+.ct-toast {
+  min-width: 260px; max-width: 380px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #111827;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  animation: ct-in .16s ease both;
+}
+.ct-toast.success { background: #065f46; }
+.ct-toast.error   { background: #991b1b; }
+.ct-toast.warning { background: #b45309; }
+.ct-toast.info    { background: #1f2937; }
+
+.ct-toast-row { display:flex; align-items:flex-start; gap:10px; }
+.ct-toast-body { flex: 1 1 auto; }
+.ct-title { font-weight: 700; line-height: 1.25; }
+.ct-text  { opacity: .95; margin-top: 4px; line-height: 1.45; font-size: 14px; }
+.ct-x {
+  background: transparent; border: none; color: rgba(255,255,255,.85);
+  font-size: 18px; line-height: 1; cursor: pointer; padding: 2px 4px; border-radius: 8px;
+}
+.ct-x:hover { background: rgba(255,255,255,.12); }
+
+/* ===== Confirm modal ===== */
+.ct-modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(17,24,39,.45);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10000;
+}
+.ct-modal {
+  width: 100%; max-width: 460px;
+  background: #fff; color:#111827;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.20);
+  animation: ct-in .16s ease both;
+}
+.ct-modal-title { margin: 0 0 6px; font-weight: 700; font-size: 18px; }
+.ct-modal-text { margin: 6px 0 14px; color:#374151; }
+.ct-modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.ct-btn {
+  height: 36px; padding: 0 14px;
+  border-radius: 10px; font-weight: 600; cursor: pointer;
+  border: 1px solid #d1d5db; background: #fff; color:#111827;
+}
+.ct-btn.ghost:hover { background:#f3f4f6; }
+.ct-btn.danger { background:#111827; color:#fff; border-color:#111827; }
+.ct-btn.danger:hover { filter: brightness(.92); }
+.ct-modal-hint { margin-top: 8px; color:#6b7280; font-size: 12px; text-align: right; }
+
+@keyframes ct-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }

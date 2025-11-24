@@ -1,0 +1,359 @@
+.browse-sellers {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.browse-sellers h2 {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.search-bar {
+  margin-bottom: 16px;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.seller-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.seller-table th,
+.seller-table td {
+  padding: 10px 12px;
+  border: 1px solid #e1e1e1;
+  text-align: left;
+}
+
+.seller-table th {
+  background-color: #f5f5f5;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions .btn-approve,
+.actions .btn-approve-all,
+.btn-view {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-view {
+  background: #4a90e2;
+  color: #fff;
+}
+
+.btn-approve {
+  background: #28a745;
+  color: #fff;
+}
+
+.btn-approve:disabled {
+  background: #c6e3d1;
+  cursor: not-allowed;
+}
+
+.btn-approve-all {
+  background: #f39c12;
+  color: #fff;
+}
+
+.btn-approve-all:disabled {
+  background: #f8d7a9;
+  cursor: not-allowed;
+}
+/* ====== Layout nhỏ ====== */
+.browse-sellers {
+  padding: 16px;
+}
+.header-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.search-input {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  min-width: 260px;
+}
+
+/* ====== Table ====== */
+.seller-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+.seller-table th,
+.seller-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+.seller-table thead th {
+  background: #f8fafc;
+  font-weight: 700;
+  color: #111827;
+}
+.text-truncate {
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.w-check { width: 44px; }
+.w-idx { width: 56px; text-align: right; }
+.w-actions { width: 100px; text-align: center; }
+.actions-cell { text-align: center; }
+
+/* ====== Icon eye button ====== */
+.icon-btn {
+  appearance: none;
+  height: 36px;
+  width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease, transform .08s ease;
+}
+.icon-btn:hover { background: #f9fafb; border-color: #d1d5db; transform: translateY(-1px); }
+.icon-btn:active { transform: translateY(0); }
+.icon-btn.ghost { /* giữ đồng nhất với ghost */
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+.eye-ic { display: block; }
+
+/* ====== Footer actions ====== */
+.footer-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* ====== Monochrome Buttons (đồng bộ với SellerDetail) ====== */
+.btn-mono {
+  --bg: #fff;
+  --fg: #111827;
+  --bd: #e5e7eb;
+  --bg-h: #f9fafb;
+  --bd-h: #d1d5db;
+  --ring: 0 0 0 3px rgba(0,0,0,.06);
+
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 8px;
+
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--bd);
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: background-color .15s ease, border-color .15s ease, transform .08s ease, opacity .15s ease;
+  user-select: none;
+}
+.btn-mono:hover:not(:disabled) { background: var(--bg-h); border-color: var(--bd-h); transform: translateY(-1px); }
+.btn-mono:active:not(:disabled) { transform: translateY(0); }
+.btn-mono:focus-visible { outline: none; box-shadow: var(--ring); }
+.btn-mono:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+.btn-mono.ghost {
+  --bg: #fff; --fg: #111827; --bd: #e5e7eb; --bg-h: #f9fafb; --bd-h: #d1d5db;
+}
+.btn-mono.black {
+  --bg: #000; --fg: #fff; --bd: #000; --bg-h: #0a0a0a; --bd-h: #0a0a0a;
+}
+.btn-mono.red {
+  --bg: #dc2626; --fg: #fff; --bd: #dc2626; --bg-h: #b91c1c; --bd-h: #b91c1c;
+  --ring: 0 0 0 3px rgba(220, 38, 38, .18);
+}
+
+/* ====== Modal (tái sử dụng từ SellerDetail) ====== */
+.wk-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,.4);
+  display: flex; align-items: center; justify-content: center; z-index: 9999;
+}
+.wk-modal {
+  background: #fff; padding: 20px; border-radius: 10px;
+  width: 420px; max-width: 90%;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  animation: fadeInScale .25s ease;
+}
+.wk-modal h3 { margin: 0 0 10px; font-size: 18px; }
+.wk-modal textarea {
+  width: 100%; resize: vertical; border-radius: 6px; border: 1px solid #ccc;
+  padding: 8px; font-size: 14px; outline: none; transition: border-color .2s;
+}
+.wk-modal textarea:focus { border-color: #dc2626; }
+.wk-modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 15px; }
+@keyframes fadeInScale { from {opacity:0; transform:scale(.95)} to {opacity:1; transform:scale(1)} }
+/* ====== Layout ====== */
+.browse-sellers { padding: 16px; }
+.header-row {
+  display: flex; gap: 12px; align-items: center; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.toolbar { display: flex; gap: 10px; align-items: center; }
+.search-input {
+  height: 40px; padding: 8px 12px; border: 1px solid #e5e7eb; border-radius: 8px; min-width: 260px;
+}
+
+/* ====== Table ====== */
+.seller-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e5e7eb; }
+.seller-table th, .seller-table td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+.seller-table thead th { background: #f8fafc; font-weight: 700; color: #111827; }
+.text-truncate { max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.w-check { width: 44px; }
+.w-idx { width: 56px; text-align: right; }
+.w-actions { width: 100px; text-align: center; }
+.actions-cell { text-align: center; }
+
+/* ====== Icon eye button ====== */
+.icon-btn {
+  appearance: none; height: 36px; width: 40px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border-radius: 8px; border: 1px solid #e5e7eb; background: #fff; color: #111827; cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease, transform .08s ease;
+}
+.icon-btn:hover { background: #f9fafb; border-color: #d1d5db; transform: translateY(-1px); }
+.icon-btn:active { transform: translateY(0); }
+.icon-btn.ghost { background: #fff; color: #111827; border: 1px solid #e5e7eb; }
+.eye-ic { display: block; }
+
+/* ====== Footer actions ====== */
+.footer-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 12px; }
+
+/* ====== Monochrome Buttons (đen–trắng–đỏ) ====== */
+.btn-mono {
+  --bg: #fff; --fg: #111827; --bd: #e5e7eb; --bg-h: #f9fafb; --bd-h: #d1d5db; --ring: 0 0 0 3px rgba(0,0,0,.06);
+  appearance: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 42px; padding: 10px 18px; border-radius: 8px;
+  background: var(--bg); color: var(--fg); border: 1px solid var(--bd);
+  font-size: 15px; font-weight: 600; cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease, transform .08s ease, opacity .15s ease;
+  user-select: none;
+}
+.btn-mono:hover:not(:disabled) { background: var(--bg-h); border-color: var(--bd-h); transform: translateY(-1px); }
+.btn-mono:active:not(:disabled) { transform: translateY(0); }
+.btn-mono:focus-visible { outline: none; box-shadow: var(--ring); }
+.btn-mono:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+.btn-mono.ghost { --bg: #fff; --fg: #111827; --bd: #e5e7eb; --bg-h: #f9fafb; --bd-h: #d1d5db; }
+.btn-mono.black { --bg: #000; --fg: #fff; --bd: #000; --bg-h: #0a0a0a; --bd-h: #0a0a0a; }
+.btn-mono.red   { --bg: #dc2626; --fg: #fff; --bd: #dc2626; --bg-h: #b91c1c; --bd-h: #b91c1c; --ring: 0 0 0 3px rgba(220,38,38,.18); }
+
+/* ====== Modal (đồng bộ SellerDetail) ====== */
+.wk-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,.4);
+  display: flex; align-items: center; justify-content: center; z-index: 9999;
+}
+.wk-modal {
+  background: #fff; padding: 20px; border-radius: 10px; width: 420px; max-width: 90%;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25); animation: fadeInScale .25s ease;
+}
+.wk-modal h3 { margin: 0 0 10px; font-size: 18px; }
+.wk-modal textarea {
+  width: 100%; resize: vertical; border-radius: 6px; border: 1px solid #ccc;
+  padding: 8px; font-size: 14px; outline: none; transition: border-color .2s;
+}
+.wk-modal textarea:focus { border-color: #dc2626; }
+.wk-modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 15px; }
+@keyframes fadeInScale { from {opacity:0; transform:scale(.95)} to {opacity:1; transform:scale(1)} }
+
+/* ====== Misc ====== */
+.error { color: #b91c1c; margin: 8px 0; }
+.loading { color: #374151; padding: 12px 0; }
+/* ====== Pagination (đồng bộ tông UI) ====== */
+.bs-pagination {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+.pg-left { color: #374151; font-size: 14px; }
+.pg-right {
+  display: flex; justify-content: flex-end; align-items: center; gap: 10px; color: #374151; font-size: 14px;
+}
+.pg-right select {
+  margin-left: 6px; border: 1px solid #e5e7eb; border-radius: 6px; padding: 4px 8px; height: 34px;
+  background: #fff;
+}
+.pg-sep {
+  display: inline-block; width: 1px; height: 18px; background: #e5e7eb; margin: 0 4px;
+}
+.pg-middle { display: flex; align-items: center; gap: 6px; justify-content: center; }
+
+.pg-btn {
+  min-width: 34px; height: 34px; padding: 0 8px;
+  border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; color: #111827;
+  cursor: pointer; transition: background-color .15s ease, border-color .15s ease, transform .08s ease, opacity .15s ease;
+}
+.pg-btn:hover:not(:disabled) { background: #f9fafb; border-color: #d1d5db; transform: translateY(-1px); }
+.pg-btn:disabled { opacity: .5; cursor: not-allowed; }
+.pg-btn.active {
+  background: #111827; color: #fff; border-color: #111827;
+}
+.pg-dots { color: #6b7280; padding: 0 2px; }
+/* ====== Table header: nền đen, chữ trắng giống các trang kia ====== */
+.seller-table thead tr {
+  background: #111827;                 /* nền đen */
+}
+.seller-table thead th {
+  background: transparent;             /* dùng nền từ <tr> */
+  color: #fff;                          /* chữ trắng */
+  border: none;                         /* giống file mẫu */
+  font-weight: 600;
+  vertical-align: middle;
+  padding: 12px 16px;                   /* đồng bộ spacing */
+}
+
+/* (tuỳ chọn) sticky header khi bảng cao và có scroll */
+.seller-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

@@ -1,0 +1,224 @@
+/* ===========================
+   UnSuspension (scoped styles)
+   Prefix: .unsusp-
+   =========================== */
+
+/* Card + Header */
+.unsusp-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(24, 39, 75, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.unsusp-header {
+  padding: 16px 16px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.unsusp-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Tiêu đề bên trái */
+.unsusp-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* Cụm actions dồn phải */
+.unsusp-actions {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Search input-group compact (CoreUI) */
+.unsusp-ig.unsusp-compact .input-group-text,
+.unsusp-ig.unsusp-compact .form-control {
+  height: 34px;
+}
+
+.unsusp-ig .input-group-text {
+  background: #fff;
+  border-color: #e5e7eb;
+}
+
+.unsusp-ig .form-control {
+  border-color: #e5e7eb;
+  min-width: 260px;
+}
+
+.unsusp-ig .form-control:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.3);
+}
+
+/* Table */
+.unsusp-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.unsusp-table thead th {
+  background: #f8fafc;
+  text-align: left;
+  padding: 12px;
+  font-size: 13px;
+  color: #475569;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.unsusp-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.unsusp-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Shop cell (avatar + meta) */
+.unsusp-cell-shop .unsusp-shop-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.unsusp-shop-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+
+.unsusp-shop-avatar.placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.unsusp-shop-meta .unsusp-shop-name {
+  font-weight: 700;
+  color: #0f172a;
+}
+.unsusp-shop-meta .unsusp-shop-sub {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Utility cells */
+.unsusp-cell-email { word-break: break-word; }
+.unsusp-cell-muted { color: #94a3b8; font-size: 13px; }
+.unsusp-w-actions { width: 128px; }
+
+/* Row action area */
+.unsusp-cell-actions {
+  text-align: center;
+}
+.unsusp-actions-wrap {
+  display: inline-flex;         /* để block inline giữa ô */
+  gap: 8px;
+  align-items: center;
+}
+
+/* Nút xem dạng outline */
+.unsusp-btn-view,
+.unsusp-icon-btn {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.unsusp-icon-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.unsusp-btn-view:hover,
+.unsusp-icon-btn:hover { background: #f9fafb; }
+
+.btn-compact-32 {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+}
+
+/* Pagination */
+.unsusp-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.unsusp-pg-btn {
+  min-width: 34px;
+  height: 34px;
+  padding: 0 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 2px;
+}
+.unsusp-pg-btn.active,
+.unsusp-pg-btn:hover {
+  background: #f1f5f9;
+}
+.unsusp-pg-dots {
+  display: inline-block;
+  padding: 0 6px;
+  color: #94a3b8;
+}
+.unsusp-pg-sep { display: inline-block; width: 10px; }
+
+/* ==== NEW: trạng thái khóa nút phân trang ==== */
+.unsusp-pg-btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  pointer-events: none;
+  background: #fff;
+  border-color: #e5e7eb;
+}
+
+/* Helpers */
+.unsusp-fade-in { animation: unsusp-fade .2s ease; }
+@keyframes unsusp-fade {
+  from { opacity: 0; transform: translateY(2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Table header: black background, white text ===== */
+.unsusp-table thead th {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #0b1220;
+  font-weight: 700;
+}
+
+/* Bo góc cho hàng tiêu đề (nếu table có border-radius) */
+.unsusp-table thead tr th:first-child { border-top-left-radius: 10px; }
+.unsusp-table thead tr th:last-child  { border-top-right-radius: 10px; }
