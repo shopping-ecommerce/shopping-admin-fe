@@ -28,7 +28,7 @@ const _nav = [
     icon: <CIcon icon={cilPeople} customClassName="nav-icon" />, // ĐÃ ĐỔI
     items: [
       // mục con: KHÔNG icon
-      { component: CNavItem, name: 'Danh sách user', to: '/users' },
+      { component: CNavItem, name: 'Danh sách người dùng', to: '/users' },
     ],
   },
 
